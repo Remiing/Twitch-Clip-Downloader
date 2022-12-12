@@ -41,7 +41,7 @@ def read_clip_list():
         pass
     f = open('clip_list.txt', 'r')
     clip_list = f.read().split('\n')
-    if clip_list[-1] == '': del clip_list[-1]
+    clip_list = list(filter(None, clip_list))
     return clip_list
 
 
